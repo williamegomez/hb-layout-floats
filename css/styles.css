@@ -5,21 +5,121 @@
 }
 
 .container {
-    background-color: red;
-    width: 1024px;
-    overflow:auto; 
+    width: 100%;
+    max-width: 1024px;
+    margin: 80px auto;
 }
 
-.firstrow {
-    background-color: green;
-    float: left;
-    width: 50%;
-    height: 300px;
+.navigationbar {
+    background-color: gray;
+    top: 0;
+    width: 100%;
+    position: fixed;
+    max-width: 1024px;
+    height: 80px;
+    border: 1px;
+    border-style: solid;
 }
 
-.secondrow {
-    background-color: blue;
+.rows {
+    margin-top: 20px;
     float: left;
-    width: 50%;
-    height: 250px;
+    width: 100%;
+}
+
+.footer {
+    margin-top: 20px;
+    background-color: gray;
+    width: 100%;
+    height: 200px;
+    position: relative;
+    float: left;
+    border: 1px;
+    border-style: solid;
+}
+
+
+.half-width{
+    border: 1px;
+    border-style: solid;
+    float: left;
+    width: calc(50% - 12px);
+    height: 120px;
+    background-color: gray;
+}
+
+.half-width:nth-of-type(1){
+    margin-right: 20px;
+}
+
+.third-width{
+    border: 1px;
+    border-style: solid;
+    float: left;
+    width: calc(33.333% - 15.333px);
+    height: 200px;
+    background-color: gray;
+}
+
+.third-width:nth-of-type(1){
+    margin-right: 20px;
+}
+
+.third-width:nth-of-type(2){
+    margin-right: 20px;
+}
+
+
+.square{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: gray;
+    border: 1px;
+    border-style: solid;
+}
+
+.encabezado{
+    text-align: center;
+    line-height: 80px;
+    height: 80px;
+}
+
+
+ 
+/* (1600x900) HD+ Display */
+@media  screen and (max-width: 480px) {
+    /* insert styles here */
+    .half-width{
+        width: calc(100% - 2px);
+    }
+
+    .half-width:nth-of-type(2){
+        margin-top: 20px;
+    }
+
+    .third-width{
+        width: calc(100% - 2px);
+    }
+
+    .third-width:nth-of-type(2){
+        margin-top: 20px;
+    }
+
+    .third-width:nth-of-type(3){
+        margin-top: 20px;
+    }
+}
+ 
+/* (1920x1080) Full HD Display */
+@media  screen and (max-width: 720px) {
+    /* insert styles here */
+}
+ 
+/* (1600x900) HD+ Display */
+@media  screen and (max-width: 1024px) {
+    /* insert styles here */
 }
